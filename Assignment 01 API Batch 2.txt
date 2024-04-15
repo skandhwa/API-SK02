@@ -1,0 +1,23 @@
+1>List users
+curl -i -H "Accept:application/json" -H "Content-Type:application/json" -H "Authorization: Bearer ACCESS-TOKEN" -XGET "https://gorest.co.in/public/v2/users"
+
+
+Create user
+
+curl -i -H "Accept:application/json" -H "Content-Type:application/json" -H "Authorization: Bearer ACCESS-TOKEN" -XPOST 
+"https://gorest.co.in/public/v2/users" -d '{"name":"Tenali Ramakrishna", "gender":"male", "email":"tenali.ramakrishna@15ce.com", "status":"active"}'
+
+
+Update user
+curl -i -H "Accept:application/json" -H "Content-Type:application/json" -H "Authorization: Bearer ACCESS-TOKEN" -XPATCH "https://gorest.co.in/public/v2/users/2139446" -d '{"name":"Allasani Peddana", "email":"allasani.peddana@15ce.com", "status":"active"}'
+
+
+
+Delete user
+curl -i -H "Accept:application/json" -H "Content-Type:application/json" -H "Authorization: Bearer ACCESS-TOKEN" -XDELETE "https://gorest.co.in/public/v2/users/2139446"
+
+
+1>Execute all in postman with https://gorest.co.in as env variables
+2>Validate all the fields in body and response code and size of response
+3>Generate a Newman Report for all the scenarios 
+4>Create a Postman Monitor and execute them weekly basis 
